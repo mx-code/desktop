@@ -170,11 +170,11 @@ ul.myNav li.hot a:hover{
 ul.myNav li.more a:hover{
     background-color: #41D3FF;
 }
-/*------------------end of header------------------------*/
+/*------------------end of header--------------------------------------------------------------*/
 div.search-container{
     position: relative;
     width: 600px;
-    margin: 0 auto;
+    margin: 30px auto;
 }
 ul.choose{
         display: block;
@@ -251,3 +251,4 @@ div.search-container nav.taobao>a.more:hover{
 div.search-container nav a:hover{
     color: #ff5400;
 }
+/*------------------end of search-------------------------------------------------------------*/
