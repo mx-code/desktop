@@ -6,7 +6,7 @@ body{
     font-size: 12px;
     font-family: tahoma,arial,"Hiragino Sans GB",宋体,sans-serif;
     line-height: 1.4;
-    background-color: #666;
+    background-color: #888;
 }
 a{
     text-decoration: none;
@@ -18,12 +18,12 @@ li{
 header{
     width: 100%;
     background-color: #F5F5F5;
+    border:1px solid rgba(192,192,192,0.5);
 }
 div.container{
     width: 1000px;
     margin: 0 auto;
     line-height: 30px;
-    /*padding: 6px 0;*/
 }
 div.cr-left{
     display: inline-block;
@@ -65,13 +65,19 @@ ul.cr-right>li>i{
     border-left-color: transparent;
     border-right-color: transparent;
 }
+ul.cr-right>li:hover i{
+    transform: rotate(180deg);
+    transform-origin: 50% 30%;
+    transition: all 0.2s;
+}
 ul.cr-right>li div.myBox{
     position: absolute;
     display: none;
     width: 110%;
     top: 30px;
     left: 0;
-    padding: 3px 0;
+    padding: 10px 0;
+    z-index: 5;
     background-color: #fff;
     border-left: 1px solid rgba(192,192,192,0.5);
     border-right: 1px solid rgba(192,192,192,0.5);
@@ -101,6 +107,7 @@ ul.cr-right>li ul.myNav{
     display: none;
     width: 1000px;
     padding: 10px 0;
+    z-index: 5;
     background: #fff;
     border-left: 1px solid rgba(192,192,192,0.5);
     border-right: 1px solid rgba(192,192,192,0.5);
@@ -164,3 +171,83 @@ ul.myNav li.more a:hover{
     background-color: #41D3FF;
 }
 /*------------------end of header------------------------*/
+div.search-container{
+    position: relative;
+    width: 600px;
+    margin: 0 auto;
+}
+ul.choose{
+        display: block;
+}
+ul.choose li{
+    padding:5px 10px;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+    color: rgba(0,0,0,0.6);
+}
+ul.choose li:hover{
+    background-color: rgba(192,192,192,0.5);
+}
+ul.choose li.tb-ho:hover{
+    color: #FF5400;
+}
+ul.choose li:after{
+    content: '';
+    clear: both;
+}
+ul.choose li.color{
+    background-color: #FF5400;
+    color: #fff;
+}
+ul.choose li.tm-color{
+    background-color: #C40000;
+    color: #fff;
+}
+form.search-box{
+    position: relative;
+    width: 600px;
+    border: 3px solid #FF5400;
+    overflow: hidden;
+}
+form.search-box input.input-search{
+    padding:8px;
+    width: 580px;
+    border-width: 0;
+}
+form.search-box button.btn-search{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    text-align: center;
+    border-width: 0;
+    background-color: #FF5400;
+    color: #fff;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+div.search-container nav{
+    position: absolute;
+    top: 73px;
+}
+div.search-container nav.tianmao{
+    display: none;
+}
+div.search-container nav>a{
+    padding: 3px;
+    color: rgba(0,0,0,0.6);
+}
+div.search-container nav.taobao>a.more{
+    border: 1px solid rgba(192,192,192,0.5);
+}
+div.search-container nav.taobao>a.more:hover{
+    background-color:#ff5400;
+    border-color: #ff5400;
+    color: #fff;
+}
+div.search-container nav a:hover{
+    color: #ff5400;
+}
