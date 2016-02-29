@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 12px;
+    font-family: tahoma,arial,"Hiragino Sans GB",宋体,sans-serif;
+    line-height: 1.4;
+    background-color: #666;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+li{
+    list-style: none;
+}
+header{
+    width: 100%;
+    background-color: #F5F5F5;
+}
+div.container{
+    width: 1000px;
+    margin: 0 auto;
+    line-height: 30px;
+    /*padding: 6px 0;*/
+}
+div.cr-left{
+    display: inline-block;
+}
+div.cr-left a.cr-login{
+    color: rgba(255,84,0,0.5);
+}
+div.cr-left a.cr-login2{
+    margin-left: 3px;
+    margin-right: 10px;
+}
+div.cr-left a:hover,ul.cr-right li>a:hover{
+    color: rgba(255,84,0,0.5);
+}
+ul.cr-right{
+    float: right;
+}
+ul.cr-right>li{
+    position: relative;
+    float: left;
+    padding: 0 5px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+ul.cr-right>li,ul.cr-right>li a{
+        color: #666;
+}
+ul.cr-right>li:after{
+    content: '';
+    clear: both;
+}
+ul.cr-right>li>i{
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    border: 5px solid;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+ul.cr-right>li div.myBox{
+    position: absolute;
+    display: none;
+    width: 110%;
+    top: 30px;
+    left: 0;
+    padding: 3px 0;
+    background-color: #fff;
+    border-left: 1px solid rgba(192,192,192,0.5);
+    border-right: 1px solid rgba(192,192,192,0.5);
+}
+ul.cr-right div.myBox>a{
+    display: block;
+    padding-left: 2px;
+}
+ul.cr-right>li:hover{
+    background-color: #fff;
+    border-color: rgba(192,192,192,0.5);
+}
+ul.cr-right>li:hover div.myBox{
+    display: block;
+}
+ul.cr-right li.no-hover,ul.cr-right li.no-hover:hover{
+    border: none;
+    background-color:#F5F5F5;
+}
+div.myBox>a:hover{
+    background: #F5F5F5;
+}
+ul.cr-right>li ul.myNav{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    display: none;
+    width: 1000px;
+    padding: 10px 0;
+    background: #fff;
+    border-left: 1px solid rgba(192,192,192,0.5);
+    border-right: 1px solid rgba(192,192,192,0.5);
+    border-bottom: 1px solid rgba(192,192,192,0.5);
+}
+ul.cr-right>li:hover>ul.myNav{
+    display: block;
+}
+ul.myNav li{
+    height: 270px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-right: 20px;
+}
+ul.myNav li nav{
+    width: auto;
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+ul.myNav li:not(:last-child){
+    border-right: 1px solid rgba(192,192,192,0.5);
+}
+ul.myNav li nav>a{
+    display: block;
+    padding:0 6px;
+    margin-top: 2px;
+    border-radius: 3px;
+}
+ul.myNav li h3{
+    font-family: tahoma,arial,"Hiragino Sans GB","Microsoft YaHei","黑体",sans-serif;
+    font-size: 16px;
+    cursor: default;
+}
+ul.myNav li.theme h3{
+    color: #FF4200;
+}
+ul.myNav li.shopping h3{
+    color: #3AE2CE;
+}
+ul.myNav li.hot h3{
+    color: #FF00AE;
+}
+ul.myNav li.more h3{
+    color: #41D3FF;
+}
+ul.myNav li a:hover{
+    color: #fff;
+}
+ul.myNav li.theme a:hover{
+    background-color: #FF4200;
+}
+ul.myNav li.shopping a:hover{
+background-color: #3AE2CE;
+}
+ul.myNav li.hot a:hover{
+    background-color: #FF00AE;
+}
+ul.myNav li.more a:hover{
+    background-color: #41D3FF;
+}
