@@ -33,12 +33,12 @@ $(function () {
 
 
     function work() {//Esc返回  and 右键菜单无效
-    $(document).keyup(function (e) {
-                if (e.keyCode==27) {
-                    $('div.showDiv').remove();
-                }
+        $(document).keyup(function (e) {
+            if (e.keyCode == 27) {
+                $('div.showDiv').remove();
+            }
         });
-    $('div.showDiv').mousedown(function (e) {
+        $('div.showDiv').mousedown(function (e) {
             if (3 == e.which) {
                 e.stopPropagation();
             }
@@ -47,8 +47,8 @@ $(function () {
 
 
 
-   function cmenu(e) {//右键菜单位置
-       e.preventDefault();
+    function cmenu(e) {//右键菜单位置
+        e.preventDefault();
         var px = e.pageX,
             py = e.pageY;
 
@@ -75,44 +75,51 @@ $(function () {
         }
     }
 
-        $(document).mousedown(function (e) {
-            if (3 == e.which) {
-                cmenu(e);
-                $('ul.clickMenu').hide();
+    $(document).mousedown(function (e) {
+        if (3 == e.which) {
+            cmenu(e);
+            $('ul.clickMenu').hide();
             $('a.new').removeClass('clickbg');
-            }
-   });
+        }
+    });
 
-        $(document).click(function (e) {
-            if (1 == e.which) {
-                $('div.contextmenu').hide();
-                $('ul.clickMenu').hide();
-                $('a.new').removeClass('clickbg');
-            }
-        });
+    $(document).click(function (e) {
+        if (1 == e.which) {
+            $('div.contextmenu').hide();
+            $('ul.clickMenu').hide();
+            $('a.new').removeClass('clickbg');
+        }
+    });
 
-        $(document).keyup(function (e) {
-            if (e.keyCode == 27 || e.keyCode==13) {
-                $('div.contextmenu').hide();
-              $('ul.clickMenu').hide();
-                $('a.new').removeClass('clickbg');
-            }
-        });
+    $(document).keyup(function (e) {
+        if (e.keyCode == 27 || e.keyCode == 13) {
+            $('div.contextmenu').hide();
+            $('ul.clickMenu').hide();
+            $('a.new').removeClass('clickbg');
+        }
+    });
 
-        $(document).contextmenu(function (e) {
-            e.preventDefault();
-        });
+    $(document).contextmenu(function (e) {
+        e.preventDefault();
+    });
 
 
-        var $aNew = $('a.new');
-           $aNew.click(function (e) {
-              // e.preventDefault();
-             e.stopPropagation();
-               $(this).addClass('clickbg')
-                       .siblings().removeClass('clickbg');
-           });
+    $('div.desktop').delegate('a.new', 'click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).addClass('clickbg')
+            .siblings().removeClass('clickbg');
+        $('div.contextmenu').hide();
+    });
 
-    $aNew.mousedown(function (e) {
+    $('div.desktop').delegate('a.new', 'dblclick', function () {
+        var thisUrl = this.href;
+        window.open(thisUrl);
+        $(this).addClass('clickbg')
+            .siblings().removeClass('clickbg');
+    });
+
+    $('div.desktop').delegate('a.new', 'mousedown', function (e){
         if (3 == e.which) {
             e.stopPropagation();
             $('div.contextmenu').hide();
@@ -161,30 +168,6 @@ $(function () {
            newHtml += '</figure></a>';
            $('div.desktop').append(newHtml);
            $('div.showDiv').remove();
-
-           /* 处理新建图标  */
-           var $aNew = $('a.new');
-           $aNew.click(function (e) {
-              // e.preventDefault();
-             e.stopPropagation();
-               $(this).addClass('clickbg')
-                       .siblings().removeClass('clickbg');
-           });
-
-    $aNew.mousedown(function (e) {
-        if (3 == e.which) {
-            e.stopPropagation();
-            $('div.contextmenu').hide();
-            $(this).addClass('clickbg')
-                .siblings().removeClass('clickbg');
-            $(this).after($('ul.clickMenu').show());
-            $('ul.clickMenu').css({
-                left: e.pageX,
-                top: e.pageY
-            });
-        }
-           });/* end of 新建图标*/
-
        });
 
 
@@ -324,8 +307,6 @@ $(function () {
 
         work();//执行Esc返回  and 右键菜单无效
    });
-
-
 
         $('div.refresh').click(function () {//refresh
             location.reload();
