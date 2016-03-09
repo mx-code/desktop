@@ -28,12 +28,6 @@
         P{
             text-align: center;
         }
-        .color4{
-            color: yellowgreen;
-        }
-        .color3{
-            color: blue;
-        }
         .color2{
             color: chocolate;
         }
@@ -43,7 +37,7 @@
         .color0{
             color: blueviolet;
         }
-        h1{
+        h1.ani{
             animation: move 1s infinite;
         }
         @keyframes move{
@@ -53,21 +47,23 @@
     </style>
 </head>
 <body>
-    <h1>404出现了
-        <p>5</p>
+    <h1 class="ani">找不到网页
+        <p></p>
     </h1>
 
     <script src="../js/jquery.min.js"></script>
     <script>
         $(function(){
-           var timeOut,x=5;
+           var timeOut,x=3;
+           $('p').text(x);
            timeOut=setInterval(function(){
                 x--;
                 $('p').text(x).attr('class',('color'+x));
                 // .addClass('color'+x).removeClass('color'+(x+1));
                if(x==0){
                clearInterval(timeOut);
-               location.href='../index.html';
+               $('h1').removeClass('ani');
+               $('p').html('<a href="/index.html" target="_top">返回主页</a>');
            }
            },1000);
         });
