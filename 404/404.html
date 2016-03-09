@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>404~~</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #888;
+            color: #fff;
+        }
+        h1{
+            font-size: 36px;
+            color: #fff;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            width: 200px;
+            height: 80px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin:  auto;
+        }
+        P{
+            text-align: center;
+        }
+        .color4{
+            color: yellowgreen;
+        }
+        .color3{
+            color: blue;
+        }
+        .color2{
+            color: chocolate;
+        }
+        .color1{
+            color: tomato;
+        }
+        .color0{
+            color: blueviolet;
+        }
+        h1{
+            animation: move 1s infinite;
+        }
+        @keyframes move{
+            form {top:0;}
+            to {top:20px;}
+        }
+    </style>
+</head>
+<body>
+    <h1>404出现了
+        <p>5</p>
+    </h1>
+
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+           var timeOut,x=5;
+           timeOut=setInterval(function(){
+                x--;
+                $('p').text(x).attr('class',('color'+x));
+                // .addClass('color'+x).removeClass('color'+(x+1));
+               if(x==0){
+               clearInterval(timeOut);
+               location.href='../index.html';
+           }
+           },1000);
+        });
+    </script>
+</body>
+</html>
