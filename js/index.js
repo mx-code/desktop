@@ -104,7 +104,7 @@ $(function() {
     });
 
 
-    $('div.desktop').delegate('a.new', 'click', function(e) {
+    $('div.desktop').on( 'click','a.new', function(e) {
         e.preventDefault();
         e.stopPropagation();
         $(this).addClass('clickbg')
@@ -112,14 +112,14 @@ $(function() {
         $('div.contextmenu').hide();
     });
 
-    $('div.desktop').delegate('a.new', 'dblclick', function() {
+    $('div.desktop').on( 'dblclick','a.new', function() {
         var thisUrl = this.href;
         window.open(thisUrl);
         $(this).addClass('clickbg')
             .siblings().removeClass('clickbg');
     });
 
-    $('div.desktop').delegate('a.new', 'mousedown', function(e) {
+    $('div.desktop').on( 'mousedown','a.new', function(e) {
         if (3 == e.which) {
             e.stopPropagation();
             $('div.contextmenu').hide();
