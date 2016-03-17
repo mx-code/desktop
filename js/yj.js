@@ -108,7 +108,7 @@ lfBtn.click(function() {
     index--;
     if (index < 1) {
         index = 0;
-        $ul.css({//其实等于0
+        $ul.css({
             left: -(index + 1) * $width
         });
         $('ul.lunbo-box>li.lbox:last').prependTo($ul);
