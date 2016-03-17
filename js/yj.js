@@ -38,24 +38,33 @@ $(function() {
 
     (function() {
         var $width,
-            index = 0, time,
+            index = 0, time,n = 0,
             $ul = $('ul.lunbo-box'),
             lfBtn = $('i.lf-btn'),
-            rtBtn=$('i.rt-btn');
+            rtBtn = $('i.rt-btn'),
+            $cir = $('div.cir-box i.cir-btn'),
+            count=$('ul.lunbo-box>li').length,
+            html=$('ul.lunbo-box>li').clone(true);
 
-            $width = $(window).width();
+            $width = $(window).width(); //控制宽度
             $('ul.lunbo-box>li.lbox').width($width);
             $ul.css({
-                width: 4 * $width
+                width: count * $width
             });
 
+    function cirBtn(n) { //小圆点
+        $cir.eq(n).addClass('cir-color')
+            .siblings().removeClass('cir-color');
+    }
 
-
-        function move() {
+        function move() { //正常轮播
             index++;
-            if (index > 3) {
+            n++;
+            n = n > (count-1) ? 0 : n;
+            cirBtn(n);
+            if (index > (count-1)) {
                 clearInterval(time);
-                index = 3;
+                index = (count-1);
                 $ul.css({
                     left: -(index-1) * $width
                 });
@@ -64,65 +73,85 @@ $(function() {
             }
             $ul.animate({
                 left: -index * $width
-            }, 'fast');
+            }, 'slow');
+
         }
         time = setInterval(move, 4000);
 
-$(window).resize(function() {
+$(window).resize(function() { //窗口变化时，改变宽度
             $width = $(window).width();
             $('ul.lunbo-box>li').width($width);
             $ul.css({
-                width: 4 * $width,
+                width: count * $width,
                 left:-index*$width
             });
             clearInterval(time);
             time = setInterval(move, 4000);
         });
 
-rtBtn.click(function() {
-    if (!$ul.is(':animated')) {
+ rtBtn.click(function() {//>>右单击
     clearInterval(time);
+    if (!$ul.is(':animated')) {
     index++;
-
-    if (index > 3) {
-        index = 3;
+    n++;
+    n = n > (count-1) ? 0 : n;
+    cirBtn(n);
+    if (index > 2) {
+        index = 2;
         $ul.css({
             left: -(index-1) * $width
         });
     $('ul.lunbo-box>li.lbox:first').appendTo($ul);
     $ul.animate({
         left: -index * $width
-    }, 'fast');
+    }, 'slow');
     } else {
         $ul.animate({
             left: -index * $width
-        }, 'fast');
+        }, 'slow');
     }
+   }
     time = setInterval(move, 4000);
-    }
 });
 
-lfBtn.click(function() {
-    if (!$ul.is(':animated')) {
-        clearInterval(time);
+lfBtn.click(function() {//<<左单击
+    clearInterval(time);
     index--;
-    if (index < 1) {
+    n--;
+    n = n <0 ? count-1 : n;
+    cirBtn(n);
+    if (index < 0) {
         index = 0;
         $ul.css({
-            left: -(index + 1) * $width
+            left: - $width
         });
         $('ul.lunbo-box>li.lbox:last').prependTo($ul);
         $ul.animate({
-            left: '+=' + (index + 1) * $width
-        }, 'fast');
+            left: '+='+ $width
+        }, 'slow');
     } else {
-        $ul.animate({
-            left: '+=' + $width
-        }, 'fast');
+         $ul.animate({
+            left: '+='+ $width
+        }, 'slow');
     }
     time = setInterval(move, 4000);
-    }
 });
+    $cir.click(function() { //小圆点单击
+        index = $(this).index();
+        n = index;
+        clearInterval(time);
+        $ul.html(html);
+        $width = $(window).width();
+        $('ul.lunbo-box>li.lbox').width($width);
+        $ul.css({
+            width: count * $width
+        });
+        cirBtn(n);
+        $ul.animate({
+            left: -index * $width
+        }, 'slow');
+        time = setInterval(move, 4000);
+    });
 
     } ());
 });
