@@ -173,7 +173,6 @@ div.nav-list div.nl-box{
     text-align: right;
 }
 div.nav-list div.nl-txt>a:last-of-type{
-/*margin-left: 858px;*/
 margin-right: 203px;
 }
 div.nav-list div.nl-box>a{
@@ -242,6 +241,25 @@ div.nav-list div.nl-box>a:hover{
 #lunbo div.btn-box i.rt-btn{
     right: 10px;
 }
+#lunbo div.cir-box{
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    right: 0;
+    margin: auto;
+    width: 200px;
+    height: 30px;
+}
+div.cir-box i.cir-btn{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: rgba(51,51,51,0.8);
+}
+div.cir-box i.cir-color{
+    background: orangered;
+}
 .lb-one{
     background: #0A85C0;
 }
@@ -260,7 +278,7 @@ div.nav-list div.nl-box>a:hover{
 }
 
 ul.banner li.br-data{
-    width: 248px;
+    width: 331px;
     height: 220px;
     float: left;
     text-align: center;
@@ -310,7 +328,11 @@ li.br-data p.br-sum a.br-enter:hover{
     position: relative;
     overflow: hidden;
 }
-ul.wrap-box,div#news-box{
+ul.wrap-box{
+    margin-top: 50px;
+    width: 1000px;
+}
+div#news-box{
     margin-top: 50px;
     width: 1020px;
 }
@@ -322,6 +344,10 @@ li.details{
     padding-right: 20px;
     float: left;
     margin-right: 17px;
+}
+li.details-rt{
+    float: right !important;
+    margin-right: 0 !important;
 }
 li.details-big{
     width: 350px;
