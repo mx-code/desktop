@@ -55,15 +55,15 @@ ul.wrap{
 }
 .download{
     position: relative;
+    width: 112px;
+    height: 29px;
     z-index: 99;
 }
 .download>a.dd-box{
-    position: relative;
     display: inline-block;
-    line-height: 0;
-    margin-top: -5px;
-    height: 12px;
-    padding: 10px;
+    width: 98px;
+    height: 33px;
+    text-align: center;
 }
 .download a.dd-box i.cir{
     display: inline-block;
@@ -76,7 +76,7 @@ ul.wrap{
 .download div.app-download{
     display: none;
     position: absolute;
-    top: 26px;
+    top: 32px;
     left: 0;
     width: 180px;
     padding: 20px;
