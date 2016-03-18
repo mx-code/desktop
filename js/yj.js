@@ -172,7 +172,9 @@ $(function() {
         poCir.eq(n).addClass('pr-bgcolor')
             .siblings('.po-cir').removeClass('pr-bgcolor');
     }
-
+    $('#d-pobtn>i').click(function() { //仅适合仅有两页的情况
+        poShow();
+    });
     timeIn = setInterval(poShow, 3000);
     poCir.mouseenter(function() {//小圆点
         n = $(this).index() - 1;
