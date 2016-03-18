@@ -155,3 +155,72 @@ lfBtn.click(function() {//<<左单击
 
     } ());
 });
+$(function() {
+    var poCir = $('div.po-btn>i.po-cir'),
+        poClose = $('#d-po>i.close'),
+        desDown = $('#des i.down-pic'),
+        poDiv = $('div.des-a'),
+        desBox=$('#container div.des-box'),
+        n=0,timeIn;
+
+    poDiv.last().hide();
+    function poShow() {//正常出现
+        n++;
+        n = n > 1 ? 0 : n;
+        poDiv.eq(n).fadeIn()
+            .siblings('.des-a').fadeOut();
+        poCir.eq(n).addClass('pr-bgcolor')
+            .siblings('.po-cir').removeClass('pr-bgcolor');
+    }
+
+    timeIn = setInterval(poShow, 3000);
+    poCir.mouseenter(function() {//小圆点
+        n = $(this).index() - 1;
+        poDiv.eq(n).fadeIn()
+            .siblings('.des-a').fadeOut();
+        poCir.eq(n).addClass('pr-bgcolor')
+            .siblings('.po-cir').removeClass('pr-bgcolor');
+    });
+
+    $('div.des-box2').hover(function() {//鼠标经过停止
+        clearInterval(timeIn);
+    }, function() {
+        timeIn = setInterval(poShow, 3000);
+    });
+
+    poClose.click(function() { //单击关闭
+        $('div.des-box1').removeClass('vsb');
+        desBox.animate({
+            height: '76px'
+        }, 'slow');
+        $('div.des-box2').animate({
+            marginTop: 0
+        }, 'slow');
+    });
+
+    desDown.click(function() {//单击下拉
+        clearInterval(timeIn);
+        desBox.animate({
+            height: '600px'
+        }, 'slow');
+        $('div.des-box2').animate({
+            marginTop: '-76px'
+        }, 'slow', function() {
+            $('div.des-box1').addClass('vsb');
+        });
+    timeIn = setInterval(poShow, 3000);
+    });
+
+    var kuClick = $('ul.ku-ul>li.ku-li'),
+        num;
+    kuClick.click(function() {
+        num = $(this).index();
+        var $this = $(this);
+        $this.addClass('cl-co')
+            .siblings('.ku-li').removeClass('cl-co');
+        $this.parent('ul.ku-ul')
+            .siblings('div.ku-sum').children('ul.ku-all').eq(num).show()
+            .siblings('ul.ku-all').hide();
+    });
+
+});
