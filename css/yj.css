@@ -252,13 +252,15 @@ div.nav-list div.nl-box>a:hover{
 }
 div.cir-box i.cir-btn{
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    background: rgba(51,51,51,0.8);
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
 }
 div.cir-box i.cir-color{
-    background: orangered;
+    background: #fff;
 }
 .lb-one{
     background: #0A85C0;
