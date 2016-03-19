@@ -1,17 +1,35 @@
-*{
-    margin: 0;
-    padding: 0;
+body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,
+pre,code,form,fieldset,legend,input,textarea,
+select,p,blockquote,th,td,hr,button,article,aside,details,
+figcaption,figure,footer,header,hgroup,menu,nav,section {
+        margin: 0;
+        padding: 0;
 }
-a{
-    text-decoration: none;
+a{text-decoration: none;color: #666;}
+a:hover { color: #f60; text-decoration:none; }
+input, button, select, textarea { outline:none; }
+li{list-style: none;}
+h1,h2,h3,h4,h5,h6 {font-weight:normal;font-size: 100%;}
+em { font-style:normal;}
+textarea{resize: none;}
+caption,th{text-align:left;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+input[type="submit"],button{cursor: pointer;}
+sup {vertical-align: text-top;}
+sub {vertical-align: text-bottom;}
+input,button,textarea,select,optgroup,option {
+    font-family:inherit;
+    font-size:inherit;
+    font-style:inherit;
+    font-weight:inherit;
 }
-li{
-    list-style: none;
+.clearfix::after,.clearfix::before{
+    display: table;
+    content: ' ';
 }
 .clearfix::after{
-    clear: both;
-    content: ' ';
-    display: table;
+        clear: both;
 }
 div.auto{
     width: 1000px;
@@ -95,10 +113,10 @@ ul.wrap{
     cursor: default;
     margin-left: 5px;
 }
-#header div.auto a{
+#header .auto a{
     color: #fff;
 }
-#header div.auto ul.wrap li>a:hover{
+#header .auto ul.wrap li>a:hover{
     color: #CA6E0C;
 }
 .download{
@@ -158,7 +176,7 @@ a.anzhuo{
 .mn{
     margin: 0 auto;
 }
-#header div.auto ul.wrap li.download:hover>a{
+#header .auto ul.wrap li.download:hover>a{
     color: #000;
     background: #fff;
 }
@@ -175,7 +193,7 @@ li.download:hover div.app-download{
     z-index: 99;
 }
 /*------------------- end of header--------------------------------------------*/
-nav#navbar{
+#navbar{
     position: relative;
     width: 100%;
     margin-top: 37px;
@@ -183,33 +201,33 @@ nav#navbar{
     height: 60px;
     line-height: 60px;
 }
-#navbar div.easy-logo{
+#navbar .easy-logo{
     float: left;
     width: 400px;
 
 }
-#navbar ul.nav-box{
+#navbar .nav-box{
     float: left;
     margin-left: 200px;
 }
-#navbar ul.nav-box li{
+#navbar .nav-box li{
     float: left;
     width: 60px;
     height: 60px;
     text-align: center;
 }
-#navbar ul.nav-box li.nav-active{
+#navbar .nav-box li.nav-active{
     background: #0195BB;
 }
-#navbar ul.nav-box>li>a{
+#navbar .nav-box>li>a{
     color: #fff;
 }
-div.nav-list{
+.nav-list{
     position: relative;
     width: 100%;
     line-height: 60px;
 }
-div.nav-list div.nl-box{
+.nav-list .nl-box{
     position: absolute;
     display: none;
     left: 0;
@@ -219,14 +237,12 @@ div.nav-list div.nl-box{
     background: #333;
     text-align: right;
 }
-div.nav-list div.nl-txt>a:last-of-type{
-margin-right: 203px;
-}
-div.nav-list div.nl-box>a{
+
+.nav-list .nl-box a{
     color: #fff;
     margin-left: 50px;
 }
-div.nav-list div.nl-box>a:hover{
+.nav-list .nl-box a:hover{
     color: #00A2CA;
 }
 /*----------end of navbar------------------------------*/
@@ -238,23 +254,23 @@ div.nav-list div.nl-box>a:hover{
     background: #fff;
     clear: both;
 }
-li.wr-li{
+.wr-li{
     float:left;
     margin-right: 50px;
     margin-top: 10px;
 }
-ul.wr-ul li.wr-li h3{
+.wr-ul .wr-li h3{
     font-weight: normal;
 }
-ul.wr-ul li.wr-li>a,ul.wr-ul li.wr-li>span{
+.wr-ul .wr-li>a,.wr-ul .wr-li>span{
     display: block;
     color: #39B6DC;
     margin-top: 5px;
 }
-ul.wr-ul li.wr-li>a:hover{
+.wr-ul .wr-li>a:hover{
     text-decoration: underline;
 }
-div.wr-bq{
+.wr-bq{
     width: 100%;
     border-top: 1px solid #EEE;
     margin-top: 20px;
@@ -263,7 +279,7 @@ div.wr-bq{
     text-align: center;
     font-size: 12px;
 }
-div.app-box{
+.app-box{
     position: fixed;
     left: 0;
     bottom: 0;
@@ -273,7 +289,7 @@ div.app-box{
     color: #fff;
     background: rgba(51,51,51,0.8);
 }
-ul.app-ul li.wr-li span{
+.app-ul .wr-li span{
     display: block;
 }
 a.app-btn{

@@ -13,7 +13,7 @@ li{
     content: ' ';
     display: table;
 }
-div.auto{
+.auto{
     width: 1000px;
     margin: 0 auto;
 }
@@ -95,10 +95,10 @@ ul.wrap{
     cursor: default;
     margin-left: 5px;
 }
-#header div.auto a{
+#header .auto a{
     color: #fff;
 }
-#header div.auto ul.wrap li>a:hover{
+#header .auto ul.wrap li>a:hover{
     color: #CA6E0C;
 }
 .download{
@@ -121,7 +121,7 @@ ul.wrap{
     border-bottom-color: transparent;
     border-left-color: transparent;
 }
-.download div.app-download{
+.download .app-download{
     display: none;
     position: absolute;
     top: 32px;
@@ -158,7 +158,7 @@ a.anzhuo{
 .mn{
     margin: 0 auto;
 }
-#header div.auto ul.wrap li.download:hover>a{
+#header .auto ul.wrap li.download:hover>a{
     color: #000;
     background: #fff;
 }
@@ -170,7 +170,7 @@ li.download:hover>a i.cir{
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
-li.download:hover div.app-download{
+li.download:hover .app-download{
     display: block;
     z-index: 99;
 }
@@ -183,7 +183,7 @@ nav#navbar{
     height: 60px;
     line-height: 60px;
 }
-#navbar div.easy-logo{
+#navbar .easy-logo{
     float: left;
     width: 400px;
 
@@ -204,13 +204,13 @@ nav#navbar{
 #navbar ul.nav-box>li>a{
     color: #fff;
 }
-div.nav-list{
+.nav-list{
     position: relative;
     width: 100%;
     height: 60px;
     line-height: 60px;
 }
-div.nav-list div.nl-box{
+.nav-list .nl-box{
     position: absolute;
     display: none;
     left: 0;
@@ -220,14 +220,14 @@ div.nav-list div.nl-box{
     background: #333;
     text-align: right;
 }
-div.nav-list div.nl-txt>a:last-of-type{
+.nav-list .nl-txt>a:last-of-type{
 margin-right: 203px;
 }
-div.nav-list div.nl-box>a{
+.nav-list .nl-box>a{
     color: #fff;
     margin-left: 50px;
 }
-div.nav-list div.nl-box>a:hover{
+.nav-list .nl-box>a:hover{
     color: #00A2CA;
 }
 /*----------end of navbar------------------------------*/
@@ -254,7 +254,7 @@ div.nav-list div.nl-box>a:hover{
     width: 1000px;
     height: 600px;
 }
-#lunbo div.btn-box{
+#lunbo .btn-box{
     position: absolute;
     left: 0;
     top: 300px;
@@ -266,7 +266,7 @@ div.nav-list div.nl-box>a:hover{
     margin: 0 auto;
     z-index: 99;
 }
-#lunbo div.btn-box i.cm-btn{
+#lunbo .btn-box i.cm-btn{
     position: absolute;
     display: block;
     width: 30px;
@@ -283,13 +283,13 @@ div.nav-list div.nl-box>a:hover{
     -ms-user-select: none;
     -webkit-user-select: none;
 }
-#lunbo div.btn-box i.lf-btn{
+#lunbo .btn-box i.lf-btn{
     left: 10px;
 }
-#lunbo div.btn-box i.rt-btn{
+#lunbo .btn-box i.rt-btn{
     right: 10px;
 }
-#lunbo div.cir-box{
+#lunbo .cir-box{
     position: absolute;
     left: 0;
     bottom: 20px;
@@ -298,7 +298,7 @@ div.nav-list div.nl-box>a:hover{
     width: 200px;
     height: 30px;
 }
-div.cir-box i.cir-btn{
+.cir-box i.cir-btn{
     display: inline-block;
     width: 16px;
     height: 16px;
@@ -307,7 +307,7 @@ div.cir-box i.cir-btn{
     border: 2px solid #fff;
     cursor: pointer;
 }
-div.cir-box i.cir-color{
+.cir-box i.cir-color{
     background: #fff;
 }
 .lb-one{
@@ -382,7 +382,7 @@ ul.wrap-box{
     margin-top: 50px;
     width: 1000px;
 }
-div#news-box{
+#news-box{
     margin-top: 50px;
     width: 1020px;
 }
@@ -446,21 +446,21 @@ li.details-big img.de-pic{
 }
 
 
-div.news{
+.news{
     width: 452px;
     height: 200px;
     padding: 12px 20px;
     background: #fff;
     border: 1px solid #eee;
 }
-div.news ul.news-now{
+.news ul.news-now{
     clear: both;
     margin-top: 30px;
 }
-div.news ul.news-now li{
+.news ul.news-now li{
     margin-top: 10px;
 }
-div.news ul.news-now li::before{
+.news ul.news-now li::before{
     content: '【新闻】';
     color: #C2B6C9;
 }
@@ -487,13 +487,13 @@ figure.zz-dx .zz-pic,
     width: 50px;
     height: 50px;
 }
-div.zizhi{
+.zizhi{
     width: 998px;
     margin-top: 50px;
     border: 1px solid #eee;
     background: #fff;
 }
-div.zizhi>h3{
+.zizhi>h3{
     width: 100%;
     height: 40px;
     line-height: 40px;
@@ -501,7 +501,7 @@ div.zizhi>h3{
     text-indent: 50px;
     border-bottom: 1px solid #eee;
 }
-div.zz-box{
+.zz-box{
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -517,7 +517,7 @@ figure.zz-dx .zz-pic{
     border: 1px solid #eee;
 }
 /*   -------        end of content-------------*/
-div.easy{
+.easy{
     width: 100%;
     height: 150px;
     margin-top: 70px;
@@ -547,7 +547,7 @@ ul.wr-ul li.wr-li>a,ul.wr-ul li.wr-li>span{
 ul.wr-ul li.wr-li>a:hover{
     text-decoration: underline;
 }
-div.wr-bq{
+.wr-bq{
     width: 100%;
     border-top: 1px solid #EEE;
     margin-top: 20px;
@@ -556,7 +556,7 @@ div.wr-bq{
     text-align: center;
     font-size: 12px;
 }
-div.app-box{
+.app-box{
     position: fixed;
     left: 0;
     bottom: 0;
