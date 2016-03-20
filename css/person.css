@@ -13,7 +13,7 @@ li{
     content: ' ';
     display: table;
 }
-div.auto{
+.auto{
     width: 1000px;
     margin: 0 auto;
 }
@@ -81,25 +81,25 @@ body{
     padding: 4px 0;
     z-index: 99;
 }
-ul.wrap{
+.wrap{
     width: auto;
     float: right;
 }
-#header ul.wrap>li,.lf{
+.wrap>li,.lf{
     float: left;
     margin-right: 8px;
 }
-#header ul.wrap>li:not(:last-of-type)::after{
+.wrap>li:not(:last-of-type)::after{
     content: '|';
     color: #fff;
     cursor: default;
     margin-left: 5px;
 }
-#header div.auto a{
+.wrap li a{
     color: #fff;
 }
-#header div.auto ul.wrap li>a:hover{
-    color: #CA6E0C;
+.wrap li>a:hover{
+    color: #f60;
 }
 .download{
     position: relative;
@@ -121,7 +121,7 @@ ul.wrap{
     border-bottom-color: transparent;
     border-left-color: transparent;
 }
-.download div.app-download{
+.download .app-download{
     display: none;
     position: absolute;
     top: 32px;
@@ -158,7 +158,7 @@ a.anzhuo{
 .mn{
     margin: 0 auto;
 }
-#header div.auto ul.wrap li.download:hover>a{
+#header .auto ul.wrap li.download:hover>a{
     color: #000;
     background: #fff;
 }
@@ -170,7 +170,7 @@ li.download:hover>a i.cir{
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
-li.download:hover div.app-download{
+li.download:hover .app-download{
     display: block;
     z-index: 99;
 }
@@ -183,33 +183,33 @@ nav#navbar{
     height: 60px;
     line-height: 60px;
 }
-#navbar div.easy-logo{
+#navbar .easy-logo{
     float: left;
     width: 400px;
 
 }
-#navbar ul.nav-box{
+.nav-box{
     float: left;
     margin-left: 200px;
 }
-#navbar ul.nav-box li{
+.nav-box li{
     float: left;
     width: 60px;
     height: 60px;
     text-align: center;
 }
-#navbar ul.nav-box li.nav-active{
+.nav-box li.nav-active{
     background: #0195BB;
 }
-#navbar ul.nav-box>li>a{
+.nav-box>li>a{
     color: #fff;
 }
-div.nav-list{
+.nav-list{
     position: relative;
     width: 100%;
     line-height: 60px;
 }
-div.nav-list div.nl-box{
+.nav-list .nl-box{
     position: absolute;
     display: none;
     left: 0;
@@ -219,14 +219,14 @@ div.nav-list div.nl-box{
     background: #333;
     text-align: right;
 }
-div.nav-list div.nl-txt>a:last-of-type{
+.nav-list .nl-txt>a:last-of-type{
 margin-right: 203px;
 }
-div.nav-list div.nl-box>a{
+.nav-list .nl-box>a{
     color: #fff;
     margin-left: 50px;
 }
-div.nav-list div.nl-box>a:hover{
+.nav-list .nl-box>a:hover{
     color: #00A2CA;
 }
 /*----------end of navbar------------------------------*/
@@ -238,23 +238,23 @@ div.nav-list div.nl-box>a:hover{
     background: #fff;
     clear: both;
 }
-li.wr-li{
+.wr-li{
     float:left;
     margin-right: 50px;
     margin-top: 10px;
 }
-ul.wr-ul li.wr-li h3{
+.wr-li h3{
     font-weight: normal;
 }
-ul.wr-ul li.wr-li>a,ul.wr-ul li.wr-li>span{
+.wr-li>a,.wr-li>span{
     display: block;
     color: #39B6DC;
     margin-top: 5px;
 }
-ul.wr-ul li.wr-li>a:hover{
+.wr-li>a:hover{
     text-decoration: underline;
 }
-div.wr-bq{
+.wr-bq{
     width: 100%;
     border-top: 1px solid #EEE;
     margin-top: 20px;
@@ -263,7 +263,7 @@ div.wr-bq{
     text-align: center;
     font-size: 12px;
 }
-div.app-box{
+.app-box{
     position: fixed;
     left: 0;
     bottom: 0;
@@ -273,7 +273,7 @@ div.app-box{
     color: #fff;
     background: rgba(51,51,51,0.8);
 }
-ul.app-ul li.wr-li span{
+.wr-li span{
     display: block;
 }
 a.app-btn{
@@ -310,17 +310,17 @@ i.close{
     overflow: hidden;
 
 }
-#lunbo ul.lunbo-box{
+.lunbo-box{
     position: relative;
     width: 4000px;
     height: 600px;
 }
-#lunbo ul.lunbo-box li.lbox{
+.lunbo-box li.lbox{
     float: left;
     width: 1000px;
     height: 600px;
 }
-#lunbo div.btn-box{
+#lunbo .btn-box{
     position: absolute;
     left: 0;
     top: 300px;
@@ -332,7 +332,7 @@ i.close{
     margin: 0 auto;
     z-index: 99;
 }
-#lunbo div.btn-box i.cm-btn{
+#lunbo .btn-box i.cm-btn{
     position: absolute;
     display: block;
     width: 30px;
@@ -349,13 +349,13 @@ i.close{
     -ms-user-select: none;
     -webkit-user-select: none;
 }
-#lunbo div.btn-box i.lf-btn{
+.btn-box i.lf-btn{
     left: 10px;
 }
-#lunbo div.btn-box i.rt-btn{
+.btn-box i.rt-btn{
     right: 10px;
 }
-#lunbo div.cir-box{
+.cir-box{
     position: absolute;
     left: 0;
     bottom: 20px;
@@ -364,7 +364,7 @@ i.close{
     width: 200px;
     height: 30px;
 }
-div.cir-box i.cir-btn{
+.cir-box i.cir-btn{
     display: inline-block;
     width: 16px;
     height: 16px;
@@ -373,7 +373,7 @@ div.cir-box i.cir-btn{
     border: 2px solid #fff;
     cursor: pointer;
 }
-div.cir-box i.cir-color{
+.cir-box i.cir-color{
     background: #fff;
 }
 .lb-one{
@@ -393,7 +393,7 @@ div.cir-box i.cir-color{
     margin-top: 50px;
 }
 
-ul.banner li.br-data{
+.banner .br-data{
     width: 331px;
     height: 220px;
     float: left;
@@ -402,30 +402,30 @@ ul.banner li.br-data{
     background: #fff;
     padding: 20px 0;
 }
-ul.banner .br-data:not(:last-of-type){
+.banner .br-data:not(:last-of-type){
     border-right-color: transparent;
 }
-ul.banner .br-data:not(:first-of-type){
+.banner .br-data:not(:first-of-type){
     border-left-style: dashed;
 }
-ul.banner li.br-data>h3{
+.banner .br-data>h3{
     font-weight: normal;
 }
-ul.banner li.br-data:hover{
+.banner .br-data:hover{
     border: 1px solid #0195BB;
 }
-li.br-data>img{
+.br-data>img{
     width: 70px;
     height: 70px;
     display: block;
 }
-li.br-data p.br-sum{
+.br-sum{
     font-size: 12px;
 }
-li.br-data p.br-sum span{
+.br-sum span{
     color: red;
 }
-li.br-data p.br-sum a.br-enter{
+.br-sum a.br-enter{
     margin: 15px auto;
     border-radius: 5px;
     display: block;
@@ -436,7 +436,7 @@ li.br-data p.br-sum a.br-enter{
     color: #fff;
     background: #6FB0D1;
 }
-li.br-data p.br-sum a.br-enter:hover{
+.br-sum a.br-enter:hover{
     background: #0A85C0;
 }
 /*---------------end of banner-----------------------*/
@@ -444,15 +444,15 @@ li.br-data p.br-sum a.br-enter:hover{
     position: relative;
     overflow: hidden;
 }
-ul.wrap-box{
+.wrap-box{
     margin-top: 50px;
     width: 1000px;
 }
-div#news-box{
+#news-box{
     margin-top: 50px;
     width: 1020px;
 }
-li.details{
+.details{
     height: 160px;
     background: #fff;
     padding: 10px;
@@ -461,20 +461,20 @@ li.details{
     float: left;
     margin-right: 17px;
 }
-li.details-rt{
+.details-rt{
     float: right !important;
     margin-right: 0 !important;
 }
-li.details-big{
+.details-big{
     width: 350px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
 }
-li.details-sm{
+.details-sm{
     width: 260px;
 }
- h3.h-title{
+ .h-title{
     font-weight: normal;
     display: inline-block;
 }
@@ -490,13 +490,13 @@ a.more:hover,a.newsa:hover{
 p.de-txt{
     font-size: 12px;
 }
-li.details-big p.de-txt{
+.details-big p.de-txt{
     width: 79%;
 }
-li.details-big p.de-txt span.de-show{
+.details-big p.de-txt span.de-show{
     display: none;
 }
-li.details-sm p.de-txt span.de-hide{
+.details-sm p.de-txt span.de-hide{
     display: none;
 }
 img.de-pic{
@@ -504,7 +504,7 @@ img.de-pic{
     width: 50px;
     height: 50px;
 }
-li.details-big img.de-pic{
+.details-big img.de-pic{
     margin-top: -50px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -512,54 +512,54 @@ li.details-big img.de-pic{
 }
 
 
-div.news{
+.news{
     width: 452px;
     height: 200px;
     padding: 12px 20px;
     background: #fff;
     border: 1px solid #eee;
 }
-div.news ul.news-now{
+.news ul.news-now{
     clear: both;
     margin-top: 30px;
 }
-div.news ul.news-now li{
+.news ul.news-now li{
     margin-top: 10px;
 }
-div.news ul.news-now li::before{
+.news ul.news-now li::before{
     content: '【新闻】';
     color: #C2B6C9;
 }
 .rt{
     float: right;
 }
-a.newsa,ul.news-now li time{
+a.newsa,.news-now li time{
     color: #666;
 }
 ul.hezuo{
     margin-top: 10px;
 }
-li.hz-li{
+.hz-li{
     float: left;
     width: 146px;
     font-size: 12px;
 }
-li.hz-li figure{
+.hz-li figure{
     text-align: center;
 }
-li.hz-li figure img.hz-pic,
-figure.zz-dx .zz-pic,
+.hz-li figure .hz-pic,
+.zz-dx .zz-pic,
 .easy-pic{
     width: 50px;
     height: 50px;
 }
-div.zizhi{
+.zizhi{
     width: 998px;
     margin-top: 50px;
     border: 1px solid #eee;
     background: #fff;
 }
-div.zizhi>h3{
+.zizhi>h3{
     width: 100%;
     height: 40px;
     line-height: 40px;
@@ -567,23 +567,23 @@ div.zizhi>h3{
     text-indent: 50px;
     border-bottom: 1px solid #eee;
 }
-div.zz-box{
+.zz-box{
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
 }
-figure.zz-dx{
+.zz-dx{
     float: left;
     margin-left: 30px;
 }
-figure.zz-dx .zz-pic{
+.zz-dx .zz-pic{
     vertical-align: middle;
     padding: 3px;
     margin-right: 5px;
     border: 1px solid #eee;
 }
 
-div.easy{
+.easy{
     width: 100%;
     height: 150px;
     margin-top: 70px;
@@ -595,17 +595,17 @@ div.easy{
     text-align: center;
 }
 /*   -------        end of content-------------*/
-#container div.des-box{
+#container .des-box{
     width: 100%;
     height: 76px;
     overflow: hidden;
 }
-#container div.des-box div.des-box1{
+.des-box .des-box1{
     width: 100%;
     background: #8F5A84;
     color: #fff;
 }
-div.vsb{
+.vsb{
     visibility: hidden;
 }
 #des>h1{
@@ -631,12 +631,12 @@ ul.des-t li.d-two{
     margin-top: 10px;
     cursor: pointer;
 }
-div.des-box2{
+.des-box2{
     width: 100%;
     height: 600px;
     position: relative;
 }
-div.des-a{
+.des-a{
     width: 100%;
     height: 600px;
     position: absolute;
@@ -650,7 +650,7 @@ div.des-a{
 .bg-green{
     background: #34B792;
 }
-div.des-a .auto h1.d-h1{
+.des-a .auto h1.d-h1{
     font-weight: 500;
     font-size: 32px;
     margin-top: 50px;
@@ -658,10 +658,10 @@ div.des-a .auto h1.d-h1{
 h1.d-h1>span.d-sp::after{
     content: ' ';
 }
-div.des-a .auto p.d-ptxt{
+.des-a .auto p.d-ptxt{
     letter-spacing: 16px;
 }
-div#d-po,div#d-po1{
+#d-po,#d-po1{
     position: absolute;
     left: 0;
     top: 0;
@@ -671,15 +671,15 @@ div#d-po,div#d-po1{
     z-index: 9;
     height: 0;
 }
-div#d-po1{
+#d-po1{
     height: 50px;
     top: 550px;
 }
-div#d-po>i.close{
+#d-po>i.close{
     font-size: 36px;
     font-weight: normal;
 }
-#d-po1 div.po-btn{
+#d-po1 .po-btn{
     position: absolute;
     width: 200px;
     left: 0;
@@ -688,7 +688,7 @@ div#d-po>i.close{
     bottom: 10px;
     text-align: center;
 }
-#d-po1 div.po-btn>a.start{
+#d-po1 .po-btn>a.start{
      background: green none repeat scroll 0 0;
     border-radius: 5px;
     box-shadow: 0 5px 4px #3C9452;
@@ -702,7 +702,7 @@ div#d-po>i.close{
     width: 180px;
     margin-bottom: 20px;
 }
-#d-po1 div.po-btn>i.po-cir{
+#d-po1 .po-btn>i.po-cir{
     display: inline-block;
     width: 16px;
     height: 16px;
@@ -711,19 +711,19 @@ div#d-po>i.close{
     background: transparent;
     cursor: pointer;
 }
-div#d-po1 div.po-btn>i.pr-bgcolor{
+#d-po1 .po-btn>i.pr-bgcolor{
     background: #fff;
 }
 /*    end of des-box-------------------------*/
-div#desMenu{
+#desMenu{
     margin-top: 30px;
 }
-div.dm-lf{
+.dm-lf{
     width: 265px;
     overflow: hidden;
     float: left;
 }
-div.dm-bt{
+.dm-bt{
     margin-top: 20px;
 }
 .block{
@@ -762,13 +762,13 @@ a.dm-more::after{
     text-align: center;
     margin-left: 7px;
 }
-div.dm-pn{
+.dm-pn{
     width: 260px;
     border: 1px solid #EEE;
     margin-top: 10px;
     margin-bottom: 20px;
 }
-div.dm-pn:hover{
+.dm-pn:hover{
     box-shadow: 0 0 5px #8F5A84;
 }
 ul.dn-ul li.txt-li{
@@ -792,7 +792,7 @@ a.und{
 a.und:hover{
     text-decoration: underline;
 }
-div.shuc{
+.shuc{
     display: inline-block;
     margin-left: 20px;
 }
@@ -833,32 +833,32 @@ ul.dn-ul li.gz>a.block{
     background: #37B5F9;
     color: #fff;
 }
-ul.dn-ul li.gz>a.block::before{
+.dn-ul li.gz>a.block::before{
     content: '+';
 }
 /*-----------------------end of left---------------*/
-div.dm-rt{
+.dm-rt{
     display: inline-block;
     margin-left: 10px;
     width: 725px;
 }
-div.rt-sp{
+.rt-sp{
 float: left;
 margin-left: 40px;
 }
-div.rt-sp figure.sp-pic{
+.rt-sp figure.sp-pic{
     position: relative;
     width: 315px;
     height: 220px;
     text-align: center;
 
 }
-div.rt-sp figure.sp-pic>img{
+.rt-sp .sp-pic>img{
     width: 315px;
     height: 200px;
     border-radius: 10px;
 }
-figure.sp-pic>a.sp-a{
+.sp-pic>a.sp-a{
     position: absolute;
     width: 100px;
     height:100px;
@@ -870,10 +870,10 @@ figure.sp-pic>a.sp-a{
     margin:auto;
     background: rgba(51,51,51,0.4);
 }
-figure.sp-pic>a.sp-a:hover{
+.sp-pic>a.sp-a:hover{
     background: rgba(51,51,51,1);
 }
-figure.sp-pic>a.sp-a>i.sp-cir{
+.sp-pic>a.sp-a>i.sp-cir{
     display: block;
     width: 50px;
     height: 50px;
@@ -883,7 +883,7 @@ figure.sp-pic>a.sp-a>i.sp-cir{
     margin-top: 20px;
     margin-left: 20px;
 }
-figure.sp-pic>a.sp-a>i.sp-cir::before{
+.sp-pic>a.sp-a>i.sp-cir::before{
     content: '';
     display: block;
     border: 15px solid #E4E4E4;
@@ -896,7 +896,7 @@ figure.sp-pic>a.sp-a>i.sp-cir::before{
 p.fg-p{
     color: #39ADE1;
 }
-div.rt-ku{
+.rt-ku{
     width: 683px;
     border: 1px solid #EEE;
     background: #fff;
@@ -905,7 +905,7 @@ div.rt-ku{
     margin-bottom: 30px;
     height: 396px;
 }
-ul.ku-ul{
+.ku-ul{
     border-bottom: 1px solid #EEE;
 }
 .ku-ul li.ku-li{
@@ -925,29 +925,29 @@ ul.ku-ul{
 .ku-ul li.ku-li:hover{
     background: #EEE;
 }
-div.ku-sum{
+.ku-sum{
     position: relative;
 }
-div.ku-sum ul.ku-all{
+.ku-sum .ku-all{
     position: absolute;
     left: 0;
     top: 0;
 }
-ul.ku-all li.hua-pic{
+.ku-all li.hua-pic{
     position: relative;
     width: 200px;
     height: 150px;
     float: left;
     margin: 10px 30px 20px 3px;
 }
-ul.ku-all li.hua-rt{
+.ku-all li.hua-rt{
     margin-right: 0;
 }
-ul.ku-all li.hua-pic img{
+.ku-all li.hua-pic img{
     width:200px;
     height: 150px;
 }
-div.hua-ch{
+.hua-ch{
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -957,11 +957,11 @@ div.hua-ch{
     color: #eee;
     background-color: rgba(51,51,51,0.5);
 }
-ul.ku-all li.hua-pic:hover div.hua-ch{
+.hua-pic:hover .hua-ch{
     background: rgba(51,51,51,1);
     color: #C99533;
 }
-div#xxk2{
+#xxk2{
     height: 205px;
 }
 .none{

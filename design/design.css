@@ -1,9 +1,9 @@
-#container .des-box{
+.des-box{
     width: 100%;
     height: 76px;
     overflow: hidden;
 }
-#container .des-box .des-box1{
+.des-box1{
     width: 100%;
     background: #8F5A84;
     color: #fff;
@@ -15,17 +15,17 @@
 float: left;
 line-height: 69px;
 }
-#des ul.des-t{
+#des .des-t{
     float: left;
     margin-left: 350px;
 }
-ul.des-t li.d-one{
+.d-one{
     margin-left: 50px;
 }
-ul.des-t li.d-two{
+.d-two{
     margin-left: 100px;
 }
-#des i.down-pic{
+.down-pic{
     width: auto;
     height: auto;
     float: left;
@@ -53,15 +53,15 @@ ul.des-t li.d-two{
 .bg-green{
     background: #34B792;
 }
-.des-a .auto h1.d-h1{
+.des-a .auto .d-h1{
     font-weight: 500;
     font-size: 32px;
     margin-top: 50px;
 }
-h1.d-h1>span.d-sp::after{
+.d-h1>.d-sp::after{
     content: ' ';
 }
-.des-a .auto p.d-ptxt{
+.des-a .auto .d-ptxt{
     letter-spacing: 10px;
 }
 #d-po,#d-po1,#d-pobtn{
@@ -102,7 +102,7 @@ h1.d-h1>span.d-sp::after{
     height: 50px;
     top: 550px;
 }
-#d-po>i.close{
+#d-po>.close{
     font-size: 36px;
     font-weight: normal;
 }
@@ -198,7 +198,7 @@ a.dm-more::after{
 .dm-pn:hover{
     box-shadow: 0 0 5px #8F5A84;
 }
-ul.dn-ul li.txt-li{
+.dn-ul .txt-li{
     width: 245px;
     padding-top: 15px;
     padding-left: 15px;
@@ -206,7 +206,7 @@ ul.dn-ul li.txt-li{
     background: #fff;
     border-bottom: 1px solid rgba(210,215,218,0.2);
 }
-ul.dn-ul li.txt-li a.user img{
+.dn-ul .txt-li a.user img{
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -227,7 +227,7 @@ span.qg{
     display: block;
     color: #d2d7da;
 }
-ul.dn-ul li.sl{
+.dn-ul li.sl{
     float: left;
     background: #FBFAF8;
     padding:0 10px;
@@ -236,19 +236,19 @@ ul.dn-ul li.sl{
     font-size: 12px;
     text-align: center;
 }
-ul.dn-ul li.bw{
+.dn-ul li.bw{
     border-left: 1px solid #d2d7da;
     border-right: 1px solid #d2d7da;
 }
-ul.dn-ul li.sl>a.block{
+.dn-ul li.sl>a.block{
     font-weight: bold;
     color: #000;
     font-size: 12px;
 }
-ul.dn-ul li.gz{
+.dn-ul li.gz{
     float: left;
 }
-ul.dn-ul li.gz>a.block{
+.dn-ul li.gz>a.block{
     display: block;
     width: 62px;
     height: 22px;
@@ -273,19 +273,19 @@ ul.dn-ul li.gz>a.block::before{
 float: left;
 margin-left: 40px;
 }
-.rt-sp figure.sp-pic{
+.rt-sp .sp-pic{
     position: relative;
     width: 315px;
     height: 220px;
     text-align: center;
 
 }
-.rt-sp figure.sp-pic>img{
+.rt-sp .sp-pic>img{
     width: 315px;
     height: 200px;
     border-radius: 10px;
 }
-figure.sp-pic>a.sp-a{
+.sp-pic>a.sp-a{
     position: absolute;
     width: 100px;
     height:100px;
@@ -297,10 +297,10 @@ figure.sp-pic>a.sp-a{
     margin:auto;
     background: rgba(51,51,51,0.4);
 }
-figure.sp-pic>a.sp-a:hover{
+.sp-pic>a.sp-a:hover{
     background: rgba(51,51,51,1);
 }
-figure.sp-pic>a.sp-a>i.sp-cir{
+.sp-pic>a.sp-a>i.sp-cir{
     display: block;
     width: 50px;
     height: 50px;
@@ -310,7 +310,7 @@ figure.sp-pic>a.sp-a>i.sp-cir{
     margin-top: 20px;
     margin-left: 20px;
 }
-figure.sp-pic>a.sp-a>i.sp-cir::before{
+.sp-pic>a.sp-a>i.sp-cir::before{
     content: '';
     display: block;
     border: 15px solid #E4E4E4;
@@ -332,10 +332,10 @@ p.fg-p{
     margin-bottom: 30px;
     height: 396px;
 }
-ul.ku-ul{
+.ku-ul{
     border-bottom: 1px solid #EEE;
 }
-.ku-ul li.ku-li{
+.ku-ul .ku-li{
     float: left;
     width: 100px;
     height: 40px;
@@ -346,31 +346,31 @@ ul.ku-ul{
     color: #94667D;
     cursor: pointer;
 }
-.ku-ul li.cl-co{
+.ku-ul .cl-co{
     background: #00A2C9;
 }
-.ku-ul li.ku-li:hover{
+.ku-ul .ku-li:hover{
     background: #EEE;
 }
 .ku-sum{
     position: relative;
 }
-.ku-sum ul.ku-all{
+.ku-all{
     position: absolute;
     left: 0;
     top: 0;
 }
-ul.ku-all li.hua-pic{
+.hua-pic{
     position: relative;
     width: 200px;
     height: 150px;
     float: left;
     margin: 10px 30px 20px 3px;
 }
-ul.ku-all li.hua-rt{
+.hua-rt{
     margin-right: 0;
 }
-ul.ku-all li.hua-pic img{
+.hua-pic img{
     width:200px;
     height: 150px;
 }
@@ -384,7 +384,7 @@ ul.ku-all li.hua-pic img{
     color: #eee;
     background-color: rgba(51,51,51,0.5);
 }
-ul.ku-all li.hua-pic:hover .hua-ch{
+.hua-pic:hover .hua-ch{
     background: rgba(51,51,51,1);
     color: #C99533;
 }

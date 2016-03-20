@@ -99,25 +99,25 @@ body{
     padding: 4px 0;
     z-index: 99;
 }
-ul.wrap{
+.wrap{
     width: auto;
     float: right;
 }
-#header ul.wrap>li,.lf{
+.wrap>li,.lf{
     float: left;
     margin-right: 8px;
 }
-#header ul.wrap>li:not(:last-of-type)::after{
+.wrap>li:not(:last-of-type)::after{
     content: '|';
     color: #fff;
     cursor: default;
     margin-left: 5px;
 }
-#header .auto a{
+.wrap li  a{
     color: #fff;
 }
-#header .auto ul.wrap li>a:hover{
-    color: #CA6E0C;
+.wrap li>a:hover{
+    color: #f60;
 }
 .download{
     position: relative;
@@ -139,7 +139,7 @@ ul.wrap{
     border-bottom-color: transparent;
     border-left-color: transparent;
 }
-.download div.app-download{
+.download .app-download{
     display: none;
     position: absolute;
     top: 32px;
@@ -176,11 +176,11 @@ a.anzhuo{
 .mn{
     margin: 0 auto;
 }
-#header .auto ul.wrap li.download:hover>a{
+#header .wrap .download:hover>a{
     color: #000;
     background: #fff;
 }
-li.download:hover>a i.cir{
+.download:hover>a i.cir{
     border-top-color: #000;
     transform: rotate(180deg);
     transform-origin: 50% 30%;
@@ -188,7 +188,7 @@ li.download:hover>a i.cir{
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
-li.download:hover div.app-download{
+.download:hover .app-download{
     display: block;
     z-index: 99;
 }
@@ -201,25 +201,25 @@ li.download:hover div.app-download{
     height: 60px;
     line-height: 60px;
 }
-#navbar .easy-logo{
+.easy-logo{
     float: left;
     width: 400px;
 
 }
-#navbar .nav-box{
+.nav-box{
     float: left;
     margin-left: 200px;
 }
-#navbar .nav-box li{
+.nav-box li{
     float: left;
     width: 60px;
     height: 60px;
     text-align: center;
 }
-#navbar .nav-box li.nav-active{
+.nav-box .nav-active{
     background: #0195BB;
 }
-#navbar .nav-box>li>a{
+.nav-box>li>a{
     color: #fff;
 }
 .nav-list{
@@ -259,15 +259,15 @@ li.download:hover div.app-download{
     margin-right: 50px;
     margin-top: 10px;
 }
-.wr-ul .wr-li h3{
+.wr-li h3{
     font-weight: normal;
 }
-.wr-ul .wr-li>a,.wr-ul .wr-li>span{
+.wr-li>a,.wr-li>span{
     display: block;
     color: #39B6DC;
     margin-top: 5px;
 }
-.wr-ul .wr-li>a:hover{
+.wr-li>a:hover{
     text-decoration: underline;
 }
 .wr-bq{
@@ -314,4 +314,7 @@ i.close{
     font-style: normal;
     font-size: 30px;
     cursor: pointer;
+}
+.none{
+    display: none;
 }

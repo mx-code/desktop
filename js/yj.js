@@ -155,6 +155,7 @@ lfBtn.click(function() {//<<左单击
 
     } ());
 });
+
 $(function() {
     var poCir = $('div.po-btn>i.po-cir'),
         poClose = $('#d-po>i.close'),
@@ -173,21 +174,21 @@ $(function() {
             .siblings('.po-cir').removeClass('pr-bgcolor');
     }
     $('#d-pobtn>i').click(function() { //仅适合仅有两页的情况
-        poShow();
+        if (!poDiv.is(':animated')) {
+            poShow();
+        }
     });
-    timeIn = setInterval(poShow, 3000);
+    timeIn = setInterval(poShow, 6000);
     poCir.mouseenter(function() {//小圆点
-        n = $(this).index() - 1;
-        poDiv.eq(n).fadeIn()
-            .siblings('.des-a').fadeOut();
-        poCir.eq(n).addClass('pr-bgcolor')
-            .siblings('.po-cir').removeClass('pr-bgcolor');
+        if (!poDiv.is(':animated')) {
+            poShow();
+        }
     });
 
     $('div.des-box2').hover(function() {//鼠标经过停止
         clearInterval(timeIn);
     }, function() {
-        timeIn = setInterval(poShow, 3000);
+        timeIn = setInterval(poShow, 6000);
     });
 
     poClose.click(function() { //单击关闭
@@ -210,8 +211,8 @@ $(function() {
         }, 'slow', function() {
             $('div.des-box1').addClass('vsb');
         });
-    timeIn = setInterval(poShow, 3000);
-    });
+        timeIn = setInterval(poShow, 6000);
+    }).trigger('click');
 
     var kuClick = $('ul.ku-ul>li.ku-li'),
         num;
@@ -225,4 +226,12 @@ $(function() {
             .siblings('ul.ku-all').hide();
     });
 
+});
+$(function() {
+    $('.xxk-li>a').mouseenter(function() {
+        $(this).addClass('has')
+            .siblings('a').removeClass('has');
+        $(this).next('p').show()
+            .siblings('p').hide();
+    });
 });

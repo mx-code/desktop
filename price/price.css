@@ -191,12 +191,10 @@ figure.sp-pic>a.sp-a>i.sp-cir{
 figure.sp-pic>a.sp-a>i.sp-cir::before{
     content: '';
     display: block;
-    border: 15px solid #E4E4E4;
-    border-right-color: transparent;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-   margin-left: 20px;
-   margin-top: 11px;
+    border-width: 12px 22px;
+    border-style: solid;
+    border-color: transparent transparent transparent #E4E4E4;
+    margin: 14px 18px;
 }
 /*  ------------------sp------------------------------*/
 #hj{

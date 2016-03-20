@@ -16,7 +16,7 @@ th{text-align:inherit}
 fieldset,img,iframe{border:0 none}
 img{display:inline-block;vertical-align:bottom;-ms-interpolation-mode:bicubic}
 iframe{display:block}
-li{vertical-align:top;list-style:none}
+ul{vertical-align:top;list-style:none}
 q:before,q:after{content:''}
 .cf:before,.cf:after{content:'';display:table}
 .cf:after{clear:both}
