@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="author" content="mx-code@foxmail.com">
+    <title> 登录 </title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sign-in.css">
+</head>
+
+<body ng-app="app" ng-controller="myCtrl as ct">
+
+    <form name="myForm" ng-submit="login()" novalidate>
+        <h3>欢迎登陆</h3>
+        <div>
+            <input type="text" class="username" name="username" ng-change="matching()" ng-model="username" required>
+            <span ng-show="myForm.invalid && myForm.username.$error.required">请输入账号</span>
+            <span ng-show="show">该账号未在本机注册过</span>
+        </div>
+        <div>
+            <input type="password" class="psd" name="psd" ng-model="psd" required>
+            <span ng-show="myForm.invalid && myForm.psd.$error.required">请输入密码</span>
+        </div>
+        <button type="submit">登录</button>
+    </form>
+
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/sign-in.js"></script>
+</body>
+
+</html>

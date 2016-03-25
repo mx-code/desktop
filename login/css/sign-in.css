@@ -1,0 +1,47 @@
+ body {
+     background: #666;
+     color: #fff;
+     font-size: 12px;
+ }
+
+ form {
+     position: absolute;
+     width: 365px;
+     height: 300px;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     margin: auto;
+ }
+
+ input,
+ button {
+     background: #666 none repeat scroll 0 0;
+     border-color: #259;
+     border-radius: 5px;
+     box-shadow: 0 0 5px #259 inset;
+     font-size: 14px;
+     color: #fff;
+     margin: 30px auto;
+     padding: 5px 10px;
+ }
+
+ button {
+     border-width: 0;
+     padding: 6px 72px;
+     font-size: 16px;
+ }
+
+ button:hover {
+     background: #eee;
+     color: #000;
+ }
+
+ h3 {
+     font-family: "Microsoft YaHei";
+     font-size: 16px;
+     font-weight: 500;
+     letter-spacing: 6px;
+     text-align: left;
+ }
