@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="author" content="mx-code@foxmail.com">
+    <title> 注册</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="pickadate/default.min.css">
+    <link rel="stylesheet" href="pickadate/default.date.min.css">
+    <link rel="stylesheet" href="css/sign-up.css">
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl as ct">
+    <form name="myForm" novalidate ng-submit="formSubmit()">
+        <h3>注册账号</h3>
+        <div class="box">
+            <label class="lb-lf" for="username">用户名</label>
+            <input type="text" id="username" class="txt" name="user" ng-model="form.name" placeholder="请输入用户名" autofocus required>
+            <span ng-show="(myForm.invalid || myForm.user.$dirty)&&myForm.user.$error.required">请输入用户名</span>
+        </div>
+        <div class="box">
+            <label class="lb-lf" for="psd1">密码</label>
+            <input type="password" class="txt" name="psd1" id="psd1" ng-model='form.psd1' ng-change="show()" required>
+            <span ng-show="(myForm.invalid || myForm.psd1.$dirty)&& myForm.psd1.$error.required">请输入至少8位密码</span>
+        </div>
+        <div class="box">
+            <label class="lb-lf" for="psd2">确认密码</label>
+            <input type="password" class="txt" id="psd2" name="psd2" ng-model='form.psd2' ng-change="show()" required>
+            <!--<span ng-show="(myForm.invalid || myForm.psd2.$dirty)&& myForm.psd2.$error.required">请输入至少8位密码</span>-->
+            <span ng-show="boo">密码输入不一致</span>
+        </div>
+        <div class="box">
+            <label class="lb-lf">性别</label>
+            <label>
+             <input type="radio" name="sex" value="male" ng-model="form.sex">男
+         </label>
+            <label>
+             <input type="radio" name="sex" value="famale" ng-model="form.sex">女
+         </label>
+        </div>
+        <div class="box" id="time">
+            <label class="lb-lf" for="birthday">出生日期</label>
+            <input type="text" class="datepicker txt" name="birthday1" id="birthday" ng-model="form.birthday" required>
+            <span ng-show="(myForm.invalid || myForm.birthday1.$dirty) && myForm.birthday1.$error.required">请填写出生日期</span>
+        </div>
+        <div class="box">
+            <label for="email" class="lb-lf">Email</label>
+            <input type="email" class="txt" id="email" ng-model="form.email" name="email" required>
+            <span ng-show="((myForm.invalid || myForm.email.$dirty) && myForm.email.$error.required)||myForm.email.$error.email">请输入正确的邮箱地址</span>
+        </div>
+        <div class="box">
+            <label class="lb-lf" for="phone">手机号码</label>
+            <input type="text" class="txt" id="phone" ng-model="form.num" name="num" ng-pattern="regex" required>
+            <span ng-show="myForm.num.$dirty && myForm.num.$error.required ||myForm.num.$invalid">请输入正确的电话号码</span>
+        </div>
+        <div class="box">
+            <label class="yes">
+                <input type="checkbox" checked="true">我已阅读并同意相关服务条款和隐私政策
+            </label>
+        </div>
+        <button type="submit" class="btn">提交注册</button>
+    </form>
+
+
+
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="pickadate/picker.min.js"></script>
+    <script src="pickadate/picker.date.min.js"></script>
+    <script src="pickadate/zh_CN.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-resource.min.js"></script>
+    <script src="js/sign-up.js"></script>
+    <script>
+        var $input = $('.datepicker').pickadate({
+            formatSubmit: 'yyyy/mm/dd',
+            container: '#time',
+            selectMonths: true,
+            max: [new Date().getFullYear() - 16, new Date().getMonth() + 1, new Date().getDate()],
+            selectYears: 20,
+            outfocus: true
+        });
+    </script>
+</body>
+
+</html>
